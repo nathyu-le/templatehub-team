@@ -1,2 +1,0 @@
-# templatehub-team
-templatehub-team
