@@ -1,0 +1,74 @@
+.shop-stats{
+  padding: 40px 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.shop-stat-card{
+  height: 110px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.shop-stat-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+.shop-stat-card .num{
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 6px;
+  color: #111; /* giữ tone đen sạch */
+}
+
+.shop-stat-card .label{
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.shop-stat-card{
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay trắng nhẹ để chữ vẫn rõ */
+.shop-stat-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.58);
+  z-index: 0;
+}
+
+/* đảm bảo chữ nổi lên trên */
+.shop-stat-card .num,
+.shop-stat-card .label{
+  position: relative;
+  z-index: 1;
+}
+.bg-users{
+  background-image: url('/uploads/ft1.jpg');
+}
+
+.bg-uptime{
+  background-image: url('/uploads/ft2.jpg');
+}
+
+.bg-support{
+  background-image: url('/uploads/ft3.jpg');
+}
+
+.bg-feature{
+  background-image: url('/uploads/ft4.jpg');
+}

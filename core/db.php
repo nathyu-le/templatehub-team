@@ -1,6 +1,6 @@
 <?php
 // core/db.php
-require_once _DIR_ . '/config.php';
+require_once __DIR__ . '/config.php';
 
 function db(): PDO {
   static $pdo = null;

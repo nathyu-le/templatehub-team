@@ -1,0 +1,135 @@
+/* ===== HERO LAMBO STYLE ===== */
+.hero-lambo{
+  position:relative;
+  min-height: 82vh;
+  background:#000;
+  color:#fff;
+  overflow:hidden;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+}
+
+.hero-video,
+.hero-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform: scale(1.02);
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(60% 60% at 30% 40%, rgba(0,0,0,.15), rgba(0,0,0,.65)),
+    linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.65) 100%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  min-height: 82vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding: 48px 0 70px;
+}
+
+.hero-left{
+  max-width: 620px;
+}
+
+.hero-kicker{
+  font-weight:800;
+  letter-spacing:.18em;
+  font-size:14px;
+  opacity:.9;
+  margin-bottom: 12px;
+}
+
+.hero-title{
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  line-height:.92;
+  font-size: clamp(40px, 5vw, 78px);
+  margin:0 0 22px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#f2c200;   /* vàng kiểu lambo */
+  color:#111;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:12px;
+  padding: 14px 18px;
+  border-radius: 0;
+}
+
+.hero-btn .arrow{
+  font-size:16px;
+  margin-left:6px;
+}
+
+.hero-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.hero-dots{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.hero-dots .dot{
+  width:42px;
+  height:3px;
+  border:0;
+  background: rgba(255,255,255,.35);
+  transition:.2s;
+}
+
+.hero-dots .dot.is-active{
+  background:#fff;
+}
+
+.hero-pause{
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.35);
+  background: rgba(0,0,0,.25);
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-footer{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  z-index:2;
+  padding: 10px 0 14px;
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55));
+}
+
+.hero-legal{
+  font-size:12px;
+  opacity:.85;
+}
+
+/* mobile */
+@media (max-width: 992px){
+  .hero-right{ display:none; }
+  .hero-content{ padding: 40px 0 80px; }
+}
+/* end lambo */

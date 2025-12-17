@@ -1,7 +1,7 @@
 <?php
 // core/auth.php
-require_once _DIR_ . '/db.php';
-require_once _DIR_ . '/helpers.php';
+require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/helpers.php';
 
 function ensure_session(): void {
   if (session_status() === PHP_SESSION_NONE) session_start();
