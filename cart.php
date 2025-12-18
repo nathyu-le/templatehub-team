@@ -5,9 +5,7 @@ require_login();
 
 $userId = (int)current_user()['id'];
 
-/**
- * Fallback (không JS) — vẫn chạy bình thường
- */
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $action = post('action');
   $cartItemId = (int)post('cart_item_id', 0);
