@@ -15,7 +15,7 @@ Free shipping within city &gt; 300K • 7-day returns • Support 24/7  </div>
   <div class="container">
 
     <a class="navbar-brand fw-bold" href="/index.php" style="letter-spacing:.5px;">
-      <img style="weight: 100px; height:50px;" src="uploads/logo.png" atl="#">
+      <img style="weight: 100px; height:50px;" src="uploads/logo.png" alt="#">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"

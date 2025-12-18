@@ -33,7 +33,6 @@ require_once __DIR__ . '/partials/head.php';
 require_once __DIR__ . '/partials/header.php';
 ?>
 
-<!-- HERO LAMBO STYLE -->
 <section class="hero-lambo" id="hero">
   <div class="hero-bg">
 
@@ -64,9 +63,9 @@ require_once __DIR__ . '/partials/header.php';
         <button class="dot" data-hero-go="2" aria-label="Slide 3"></button>
       </div>
 
-      <button class="hero-pause" data-hero-toggle aria-label="Pause/Play">
-        <span class="icon">Ⅱ</span>
-      </button>
+      <button type="button" class="hero-pause" data-hero-toggle aria-label="Pause/Play">
+  <span class="icon">Ⅱ</span>
+</button>
     </div>
   </div>
 
@@ -80,41 +79,14 @@ require_once __DIR__ . '/partials/header.php';
 </section>
 
   <!-- NEWSLETTER -->
-  <section class="shop-stats">
-  <div class="container">
-    <div class="row g-3 justify-content-center">
-     <div class="col-6 col-md-3">
-  <div class="shop-stat-card bg-users">
-    <div class="num">50K+</div>
-    <div class="label">Customer</div>
-  </div>
-</div>
-
-<div class="col-6 col-md-3">
-  <div class="shop-stat-card bg-uptime">
-    <div class="num">99.9%</div>
-    <div class="label">Uptime</div>
-  </div>
-</div>
-
-<div class="col-6 col-md-3">
-  <div class="shop-stat-card bg-support">
-    <div class="num">24/7</div>
-    <div class="label">Support</div>
-  </div>
-</div>
-
-<div class="col-6 col-md-3">
-  <div class="shop-stat-card bg-feature">
-    <div class="num">100+</div>
-    <div class="label">Features</div>
-  </div>
-</div>
-
-    </div>
-  </div>
+  <section class="container my-5">
+  <iframe
+    src="tailwind/tailwind-demo.html"
+    style="width:100%;border:0;overflow:hidden;display:block;"
+    height="170"
+    loading="lazy">
+  </iframe>
 </section>
-<br>
 <main class="container">
 
   <!-- NEW -->
@@ -152,39 +124,12 @@ if ($sale !== null && $sale > 0 && $sale < $price) {
       <div class="sub">we design according to your style.</div>
     </div>
   </div>
-
-  <div class="row g-3 cgrid">
-    <div class="col-md-4">
-      <a class="citem d-block" href="/products.php">
-        <img src="/uploads/bst1.jpg" alt="">
-        <div class="cover"></div>
-        <div class="txt">
-          <div class="t">LUXURIOUS STYLE</div>
-          <div class="d">fashionable and elegant</div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a class="citem d-block" href="/products.php">
-        <img src="/uploads/bst2.jpg" alt="">
-        <div class="cover"></div>
-        <div class="txt">
-          <div class="t">SPORT STYLE</div>
-          <div class="d">dynamic and individualistic</div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a class="citem d-block" href="/products.php">
-        <img src="/uploads/bst3.jpg" alt="">
-        <div class="cover"></div>
-        <div class="txt">
-          <div class="t">STREET STYLE</div>
-          <div class="d">hip hop and cool</div>
-        </div>
-      </a>
-    </div>
-  </div>
+<iframe
+    src="tailwind/tailwind-collections.html"
+    style="width:100%;border:0;overflow:hidden;display:block;"
+    height="260"
+    loading="lazy">
+  </iframe>
 </section>
   <!-- BEST SELLER -->
   <div class="section-head">
@@ -222,43 +167,13 @@ if ($sale !== null && $sale > 0 && $sale < $price) {
     <a class="btn btn-outline-dark btn-sm" href="#">Read more</a>
   </div>
 
-  <div class="row g-3">
-    <div class="col-md-4">
-        <a href="https://ww.fashionnetwork.com/news/Portuguese-label-ementa-makes-its-paris-debut,1792330.html" class="blog-link">
-      <div class="blogcard">
-        <img src="/uploads/bl1.jpg" alt="">
-        <div class="b">
-          <div class="date">Dec 2025</div>
-          <div class="title">Portuguese label Ementa makes its Paris debut</div>
-          <p class="desc">Just a stone's throw from the bustle of Paris' Les Halles, Ementa’s new boutique at 11, rue Montmartre gleams in green. </p>
-        </div>
-      </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-        <a href="http://ww.fashionnetwork.com/news/Rag-bone-names-swaim-hutson-head-of-menswear-design,1792288.html" class="blog-link">
-      <div class="blogcard">
-        <img src="/uploads/bl2.jpg" alt="">
-        <div class="b">
-          <div class="date">Dec 2025</div>
-          <div class="title">Rag & Bone names Swaim Hutson head of menswear design</div>
-          <p class="desc">The upcoming January edition of Pitti Uomo will mark Swaim Hutson’s debut as head of menswear design at Rag & Bone..</p>
-        </div>
-      </div>
-      </a>
-    </div>
-    <div class="col-md-4">
-        <a href="https://ww.fashionnetwork.com/news/Six-stories-is-expanding-at-pace-so-looks-for-major-hires,1792266.html" class="blog-link">
-      <div class="blogcard">
-        <img src="/uploads/bl3.jpg" alt="">
-        <div class="b">
-          <div class="date">Dec 2025</div>
-          <div class="title">Six Stories is expanding at pace so looks for major hires</div>
-          <p class="desc">UK fast-growing bridal and occasionwear brand Six Stories is on a major recruitment drive in order to support its “next phase of scale” backed by a “significant investment in senior talent”. ..</p>
-        </div>
-      </div>
-      </a>
-    </div>
+ <iframe
+    src="tailwind/tailwind-blog.html"
+    style="width:100%;border:0;overflow:hidden;display:block;"
+    height=400
+    loading="lazy">
+  </iframe>
+</section>
   </div>
   </section>
 <br>

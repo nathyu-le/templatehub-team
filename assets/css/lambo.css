@@ -26,6 +26,7 @@
   background:
     radial-gradient(60% 60% at 30% 40%, rgba(0,0,0,.15), rgba(0,0,0,.65)),
     linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.65) 100%);
+     pointer-events: none;
 }
 
 .hero-content{
@@ -132,4 +133,14 @@
   .hero-right{ display:none; }
   .hero-content{ padding: 40px 0 80px; }
 }
+/* FIX: đảm bảo nút bấm luôn nằm trên cùng và nhận click */
+.hero-bg{ z-index:0; }
+.hero-video{ pointer-events:none; }       /* video không được ăn click */
+.hero-overlay{ pointer-events:none; }     /* overlay không được ăn click */
+
+.hero-content{ position:relative; z-index:10; }
+.hero-right{ position:relative; z-index:20; }
+.hero-pause, .hero-dots{ position:relative; z-index:30; pointer-events:auto; }
+
+
 /* end lambo */

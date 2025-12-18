@@ -1,0 +1,1 @@
+[18-Dec-2025 21:29:10 UTC] PHP Warning:  file_put_contents(/home/gtaphoatoolcom/loveu2.baby/logs/logs/error.log): failed to open stream: No such file or directory in /home/gtaphoatoolcom/loveu2.baby/logs/test_log.php on line 5

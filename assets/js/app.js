@@ -255,3 +255,61 @@
   setActive(0);
 })();
 //end lambo
+
+//Error logging
+window.addEventListener("error", function (e) {
+  fetch("/log_js_error.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: e.message,
+      source: e.filename,
+      lineno: e.lineno,
+      colno: e.colno,
+      url: location.href
+    })
+  }).catch(() => {});
+});
+
+window.addEventListener("unhandledrejection", function (e) {
+  fetch("/log_js_error.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: "UnhandledPromise: " + (e.reason?.message || e.reason),
+      source: "promise",
+      lineno: "-",
+      colno: "-",
+      url: location.href
+    })
+  }).catch(() => {});
+});
+console.log("LOGGER LOADED");
+
+window.addEventListener("error", function (e) {
+  fetch("/log_js_error.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: e.message,
+      source: e.filename,
+      lineno: e.lineno,
+      colno: e.colno,
+      url: location.href
+    })
+  }).catch(() => {});
+});
+
+window.addEventListener("unhandledrejection", function (e) {
+  fetch("/log_js_error.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: "UnhandledPromise: " + (e.reason?.message || e.reason),
+      source: "promise",
+      lineno: "-",
+      colno: "-",
+      url: location.href
+    })
+  }).catch(() => {});
+});
