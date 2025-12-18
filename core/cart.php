@@ -39,7 +39,14 @@ function cart_add(int $userId, int $productId, int $qty = 1): void {
   $p = $st->fetch();
   if (!$p || (int)$p['is_active'] !== 1) return;
 
-  $unit = ($p['sale_price'] !== null) ? (float)$p['sale_price'] : (float)$p['price'];
+  $price = (float)$p['price'];
+$sale  = ($p['sale_price'] === null) ? null : (float)$p['sale_price'];
+
+$unit = $price; // default dùng giá gốc
+if ($sale !== null && $sale > 0 && $sale < $price) {
+  $unit = $sale; // chỉ dùng sale khi sale hợp lệ
+}
+
 
   $st = $pdo->prepare("
     INSERT INTO cart_items(cart_id, product_id, quantity, unit_price)

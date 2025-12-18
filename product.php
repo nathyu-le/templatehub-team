@@ -15,7 +15,13 @@ require_once __DIR__ . '/partials/header.php';
   <?php if (!$p): ?>
     <div class="card p-4">Không tìm thấy sản phẩm.</div>
   <?php else:
-    $final = $p['sale_price'] ?? $p['price'];
+$price = (float)$p['price'];
+$sale  = ($p['sale_price'] === null) ? null : (float)$p['sale_price'];
+
+$final = $price;
+if ($sale !== null && $sale > 0 && $sale < $price) {
+  $final = $sale;
+}
   ?>
     <div class="row g-4">
       <div class="col-md-5">

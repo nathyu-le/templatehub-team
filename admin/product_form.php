@@ -2,6 +2,57 @@
 require_once __DIR__ . '/partials/header.php';
 require_once __DIR__ . '/partials/sidebar.php';
 
+/**
+ * Make slug (NO mbstring required)
+ */
+function make_slug(string $s): string {
+  $s = trim($s);
+  if ($s === '') return '';
+
+  // nếu có iconv thì convert tiếng Việt -> latin
+  if (function_exists('iconv')) {
+    $tmp = @iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $s);
+    if ($tmp !== false) $s = $tmp;
+  }
+
+  $s = strtolower($s);
+  // giữ chữ + số, đổi phần còn lại thành "-"
+  $s = preg_replace('/[^a-z0-9]+/', '-', $s);
+  $s = trim($s, '-');
+  $s = preg_replace('/-+/', '-', $s);
+
+  return $s ?: 'product';
+}
+
+/**
+ * Ensure unique slug in products table.
+ * If exists -> append -2, -3...
+ */
+function ensure_unique_product_slug(string $baseSlug, int $ignoreId = 0): string {
+  $baseSlug = make_slug($baseSlug);
+  $pdo = db();
+
+  $slug = $baseSlug;
+  $i = 2;
+
+  while (true) {
+    if ($ignoreId > 0) {
+      $st = $pdo->prepare("SELECT id FROM products WHERE slug=? AND id<>? LIMIT 1");
+      $st->execute([$slug, $ignoreId]);
+    } else {
+      $st = $pdo->prepare("SELECT id FROM products WHERE slug=? LIMIT 1");
+      $st->execute([$slug]);
+    }
+
+    $exists = $st->fetch();
+    if (!$exists) return $slug;
+
+    $slug = $baseSlug . '-' . $i;
+    $i++;
+    if ($i > 200) return $baseSlug . '-' . time(); // cứu hộ
+  }
+}
+
 $id = (int)($_GET['id'] ?? 0);
 $isEdit = $id > 0;
 
@@ -40,7 +91,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $is_active = isset($_POST['is_active']) ? 1 : 0;
 
   if ($name === '') $errors[] = "Name is required";
-  if ($slug === '') $errors[] = "Slug is required";
+
+  // ✅ AUTO SLUG: nếu để trống thì tự tạo từ name
+  if ($slug === '') $slug = make_slug($name);
+
+  // ✅ UNIQUE SLUG: chống trùng (edit thì bỏ qua chính nó)
+  $slug = ensure_unique_product_slug($slug, $isEdit ? $id : 0);
 
   $thumbPath = $product['thumbnail'] ?? '';
 
@@ -107,8 +163,9 @@ $thumb = $product['thumbnail'] ?: 'uploads/placeholder.png';
       </div>
 
       <div class="col-md-6">
-        <label class="form-label">Slug</label>
-        <input class="form-control" name="slug" value="<?= e($product['slug'] ?? '') ?>" required>
+        <label class="form-label">Slug (optional)</label>
+        <!-- ✅ bỏ required để admin khỏi phải nhập -->
+        <input class="form-control" name="slug" value="<?= e($product['slug'] ?? '') ?>" placeholder="auto from name if empty">
       </div>
 
       <div class="col-md-6">

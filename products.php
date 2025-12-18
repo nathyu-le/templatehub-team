@@ -83,7 +83,13 @@ require_once __DIR__ . '/partials/header.php';
   <?php else: ?>
     <div class="row g-4">
       <?php foreach ($products as $p):
-        $final = $p['sale_price'] ?? $p['price'];
+$price = (float)$p['price'];
+$sale  = ($p['sale_price'] === null) ? null : (float)$p['sale_price'];
+
+$final = $price;
+if ($sale !== null && $sale > 0 && $sale < $price) {
+  $final = $sale;
+}
         $thumb = $p['thumbnail'] ?: 'uploads/placeholder.png';
       ?>
         <div class="col-6 col-md-3">

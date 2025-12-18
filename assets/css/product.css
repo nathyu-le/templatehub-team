@@ -28,8 +28,8 @@
 /* nút add chỉ hiện khi hover (cho sạch như ảnh 2) */
 .showcase-add{
   margin-top: 10px;
-  border: 1px solid #0055ff;
-  background:#066bff29;
+  border: 1px solid #ff5800;
+  background: #fa6b054a;
   font-weight: 800;
   font-size: 12px;
   padding: 8px 12px;
@@ -37,7 +37,7 @@
   opacity: 0;
   transform: translateY(6px);
   transition: .2s ease;
-  color:#0055ff;
+  color: #fa6b05;
 }
 .showcase:hover .showcase-add{ opacity: 1; transform: translateY(0); }
 .showcase-add:hover{ border-color: var(--brand); color: var(--brand); }

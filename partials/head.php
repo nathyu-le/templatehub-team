@@ -13,9 +13,9 @@
   rel="stylesheet"
   href="https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css">
 
-<link rel="stylesheet" href="/assets/css/theme.css?v=10">
+<link rel="stylesheet" href="/assets/css/theme.css?v=13">
 <link rel="stylesheet" href="/assets/css/lambo.css">
-<link rel="stylesheet" href="/assets/css/product.css?v=8">
+<link rel="stylesheet" href="/assets/css/product.css?v=10">
 <link rel="stylesheet" href="/assets/css/blog.css">
 <link rel="stylesheet" href="/assets/css/custom.css?v=10">
 

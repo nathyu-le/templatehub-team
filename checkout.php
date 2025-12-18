@@ -65,7 +65,10 @@ require_once __DIR__ . '/partials/header.php';
             </select>
           </div>
           <div class="col-12 d-grid">
-            <button class="btn btn-primary">Đặt hàng</button>
+            <button style="
+  background: #ff7a00;
+  color: #fff;
+" class="btn btn-cta">Đặt hàng</button>
           </div>
         </form>
       </div>

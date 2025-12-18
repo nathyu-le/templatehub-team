@@ -20,7 +20,7 @@ a{ color:inherit; text-decoration:none }
 .container{ max-width: 1200px; }
 
 .topbar{
-  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  background: #ff751f;
   color:#fff;
   font-size:13px;
 }
@@ -304,10 +304,11 @@ a{ color:inherit; text-decoration:none }
   display:inline-flex;
   width:36px;height:36px;
   align-items:center;justify-content:center;
-  border:1px solid var(--border);
+  border:1px solid #ff751f;
   border-radius:999px;
   margin-right:8px;
-  color:#0f172a;
+  color:#000000;
+  background: #ffffff;
 }
 .footer .bottom{
   margin-top:18px;

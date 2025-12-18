@@ -8,15 +8,14 @@ $cartCount = $user ? cart_count_items_by_user((int)$user['id']) : 0;
 
 <div class="topbar py-1">
   <div class="container text-center">
-    Free shipping nội thành &gt; 300K • 7-day returns • Support 24/7
-  </div>
+Free shipping within city &gt; 300K • 7-day returns • Support 24/7  </div>
 </div>
 
 <nav class="navbar navbar-expand-lg header sticky-top">
   <div class="container">
 
     <a class="navbar-brand fw-bold" href="/index.php" style="letter-spacing:.5px;">
-      SIMPLESHOP
+      <img style="weight: 100px; height:50px;" src="uploads/logo.png" atl="#">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"

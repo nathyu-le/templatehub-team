@@ -80,11 +80,15 @@ require_once __DIR__ . '/partials/header.php';
       </div>
 
       <div class="col-12 d-grid">
-        <button class="btn btn-primary">Tạo tài khoản</button>
+        <button class="btn btn-cta">Tạo tài khoản</button>
       </div>
-
+<style> .btn-cta {
+  background: #ff7a00;
+  color: #fff;
+}
+</style>
       <div class="col-12 small text-muted">
-        Đã có tài khoản? <a href="/login.php" class="link-light">Đăng nhập</a>
+        Đã có tài khoản? <a href="/login.php" class="link-dark">Đăng nhập</a>
       </div>
     </form>
   </div>

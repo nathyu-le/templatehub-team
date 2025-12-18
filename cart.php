@@ -49,8 +49,13 @@ require_once __DIR__ . '/partials/header.php';
   <?php if (!$items): ?>
     <div class="border rounded-4 p-4 bg-white">
       <div class="text-muted mb-3">Giỏ hàng đang trống.</div>
-      <a class="btn btn-primary" href="/products.php">Mua ngay</a>
+      <a class="btn btn-cta" href="/products.php">Mua ngay</a>
     </div>
+    <style> .btn-cta {
+  background: #ff7a00;
+  color: #fff;
+}
+</style>
   <?php else: ?>
     <div class="row g-3">
       <!-- LEFT: items -->
@@ -166,7 +171,10 @@ require_once __DIR__ . '/partials/header.php';
             <span class="text-muted" style="font-size:13px;">Tính khi thanh toán</span>
           </div>
 
-          <a class="btn btn-primary w-100" href="/checkout.php">Thanh toán</a>
+          <a style="
+  background: #ff7a00;
+  color: #fff; 
+" class="btn btn-cta w-100" href="/checkout.php">Thanh toán</a>
 
           <div class="text-muted mt-2" style="font-size:12px;">
             Mẹo: bấm Update sau khi đổi số lượng.
