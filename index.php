@@ -167,12 +167,7 @@ if ($sale !== null && $sale > 0 && $sale < $price) {
     <a class="btn btn-outline-dark btn-sm" href="#">Read more</a>
   </div>
 
- <iframe
-    src="tailwind/tailwind-blog.html"
-    style="width:100%;border:0;overflow:hidden;display:block;"
-    height=400
-    loading="lazy">
-  </iframe>
+<?php include __DIR__ . '/tailwind/tailwind-blog.php'; ?>
 </section>
   </div>
   </section>
