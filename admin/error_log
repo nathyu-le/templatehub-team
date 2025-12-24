@@ -1,0 +1,34 @@
+[23-Dec-2025 19:34:08 UTC] PHP Warning:  Undefined variable $pdo in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:34:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/toataikhoanvn/likesub.sale/admin/blog_add.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:36:12 UTC] PHP Warning:  Undefined variable $pdo in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:36:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/toataikhoanvn/likesub.sale/admin/blog_add.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:36:36 UTC] PHP Warning:  Undefined variable $pdo in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:36:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/toataikhoanvn/likesub.sale/admin/blog_add.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:37:48 UTC] PHP Warning:  Undefined variable $pdo in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:37:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/toataikhoanvn/likesub.sale/admin/blog_add.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:39:09 UTC] PHP Warning:  Undefined variable $pdo in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:39:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/toataikhoanvn/likesub.sale/admin/blog_add.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/admin/blog_add.php on line 15
+[23-Dec-2025 19:47:37 UTC] PHP Warning:  move_uploaded_file(/home/toataikhoanvn/likesub.sale/admin/../uploads/blog/1766519257_5666.jpg): Failed to open stream: No such file or directory in /home/toataikhoanvn/likesub.sale/admin/blog.php on line 30
+[23-Dec-2025 19:47:37 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwjZOUf' to '/home/toataikhoanvn/likesub.sale/admin/../uploads/blog/1766519257_5666.jpg' in /home/toataikhoanvn/likesub.sale/admin/blog.php on line 30
+[23-Dec-2025 19:50:01 UTC] PHP Warning:  move_uploaded_file(/home/toataikhoanvn/likesub.sale/admin/../uploads/blog/1766519401_7765.jpg): Failed to open stream: No such file or directory in /home/toataikhoanvn/likesub.sale/admin/blog.php on line 30
+[23-Dec-2025 19:50:01 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php61muur' to '/home/toataikhoanvn/likesub.sale/admin/../uploads/blog/1766519401_7765.jpg' in /home/toataikhoanvn/likesub.sale/admin/blog.php on line 30
+[23-Dec-2025 20:09:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'toataikhoanvn_ad.blog' doesn't exist in /home/toataikhoanvn/likesub.sale/admin/blog.php:54
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/admin/blog.php(54): PDO->query()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/admin/blog.php on line 54

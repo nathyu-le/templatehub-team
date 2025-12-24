@@ -1,0 +1,57 @@
+[23-Dec-2025 19:58:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'toataikhoanvn_ad.blogs' doesn't exist in /home/toataikhoanvn/likesub.sale/blog.php:8
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/blog.php(8): PDO->query()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/blog.php on line 8
+[23-Dec-2025 20:02:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'toataikhoanvn_ad.blogs' doesn't exist in /home/toataikhoanvn/likesub.sale/blog.php:6
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/blog.php(6): PDO->query()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/blog.php on line 6
+[23-Dec-2025 20:02:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'toataikhoanvn_ad.blogs' doesn't exist in /home/toataikhoanvn/likesub.sale/blog.php:6
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/blog.php(6): PDO->query()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/blog.php on line 6
+[23-Dec-2025 20:17:06 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 34
+[23-Dec-2025 20:17:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 34
+[23-Dec-2025 20:17:06 UTC] PHP Fatal error:  Uncaught TypeError: e(): Argument #1 ($s) must be of type string, null given, called in /home/toataikhoanvn/likesub.sale/blog.php on line 34 and defined in /home/toataikhoanvn/likesub.sale/core/helpers.php:3
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/blog.php(34): e()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/core/helpers.php on line 3
+[23-Dec-2025 20:17:09 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 34
+[23-Dec-2025 20:17:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 34
+[23-Dec-2025 20:17:09 UTC] PHP Fatal error:  Uncaught TypeError: e(): Argument #1 ($s) must be of type string, null given, called in /home/toataikhoanvn/likesub.sale/blog.php on line 34 and defined in /home/toataikhoanvn/likesub.sale/core/helpers.php:3
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/blog.php(34): e()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/core/helpers.php on line 3
+[23-Dec-2025 20:17:53 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 34
+[23-Dec-2025 20:17:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 34
+[23-Dec-2025 20:17:53 UTC] PHP Fatal error:  Uncaught TypeError: e(): Argument #1 ($s) must be of type string, null given, called in /home/toataikhoanvn/likesub.sale/blog.php on line 34 and defined in /home/toataikhoanvn/likesub.sale/core/helpers.php:3
+Stack trace:
+#0 /home/toataikhoanvn/likesub.sale/blog.php(34): e()
+#1 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/core/helpers.php on line 3
+[23-Dec-2025 20:20:41 UTC] PHP Parse error:  syntax error, unexpected token "endforeach" in /home/toataikhoanvn/likesub.sale/blog.php on line 56
+[23-Dec-2025 20:20:53 UTC] PHP Parse error:  syntax error, unexpected token "endforeach" in /home/toataikhoanvn/likesub.sale/blog.php on line 56
+[23-Dec-2025 20:23:14 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 28
+[23-Dec-2025 20:23:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 28
+[23-Dec-2025 20:25:21 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 28
+[23-Dec-2025 20:25:21 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 28
+[23-Dec-2025 20:29:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function db() in /home/toataikhoanvn/likesub.sale/blog.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/toataikhoanvn/likesub.sale/blog.php on line 3
+[23-Dec-2025 22:02:28 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 57
+[23-Dec-2025 22:02:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 57
+[23-Dec-2025 22:10:29 UTC] PHP Fatal error:  Cannot redeclare e() (previously declared in /home/toataikhoanvn/likesub.sale/blog.php:10) in /home/toataikhoanvn/likesub.sale/core/helpers.php on line 4
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Undefined variable $blog in /home/toataikhoanvn/likesub.sale/blog.php on line 59
+[23-Dec-2025 22:29:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/toataikhoanvn/likesub.sale/blog.php on line 59

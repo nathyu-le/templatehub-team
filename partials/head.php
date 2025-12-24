@@ -16,10 +16,10 @@
 
   
   
-<link rel="stylesheet" href="/assets/icons/uicons-thin-rounded.css">
+<link rel="stylesheet" href="/assets/icons/uicons-thin-rounded.css?v=1">
 <link rel="stylesheet" href="/assets/css/theme.css?v=10">
 <link rel="stylesheet" href="/assets/css/lambo.css?v=1">
-<link rel="stylesheet" href="/assets/css/product.css?v=8">
+<link rel="stylesheet" href="/assets/css/product.css?v=13">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BKSNHQW96"></script>

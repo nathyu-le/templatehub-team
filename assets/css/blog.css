@@ -1,14 +1,55 @@
-.blog-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+/* Card glow background */
+.card-glow {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  transition: transform 0.5s ease;
+}
+.card-bg-glow {
+  background: linear-gradient(45deg, #ff8c42, #ff5500, #000000, #ff9f1c);
+  mix-blend-mode: screen;
 }
 
-.blogcard {
-  transition: transform .3s ease, box-shadow .3s ease;
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #ff8c42, #ff5500, #000000, #ff9f1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-glow 3s infinite alternate;
+}
+@keyframes text-glow {
+  0% { text-shadow: 0 0 5px #ff8c42, 0 0 10px #ff5500; }
+  50% { text-shadow: 0 0 10px #ff9f1c, 0 0 20px #000; }
+  100% { text-shadow: 0 0 15px #ff8c42, 0 0 25px #ff5500; }
 }
 
-.blogcard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+/* Animations */
+.animate-fade-in {
+  animation: fade-in 1s ease forwards;
+}
+.animate-fade-in-delay {
+  animation: fade-in 1s ease 0.3s forwards;
+}
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse animation */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Blog image hover */
+.blog-image {
+  border-radius: 1.5rem;
+  transition: transform 0.7s ease;
+}
+.blog-image:hover {
+  transform: scale(1.05) rotate(1deg);
 }

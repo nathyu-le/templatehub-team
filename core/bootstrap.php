@@ -9,3 +9,7 @@ require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/helpers.php';
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/cart.php';
+function blog_image($path) {
+    if (!$path) return '/uploads/placeholder.png'; // fallback khi DB trống
+    return '/' . ltrim($path, '/'); // đảm bảo luôn có dấu /
+}

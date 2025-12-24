@@ -1,2 +1,6 @@
 2025-12-18T21:23:42+00:00 | FINAL TEST OK | manual:1
 2025-12-18T21:30:12+00:00 | TEST LOG FROM CONSOLE | manual:999
+2025-12-23T21:07:57+00:00 | Uncaught SyntaxError: missing ) after argument list | https://likesub.sale/cart.php:189
+2025-12-23T21:07:57+00:00 | Uncaught SyntaxError: missing ) after argument list | https://likesub.sale/cart.php:189
+2025-12-24T09:05:55+00:00 | Uncaught SyntaxError: missing ) after argument list | -:-
+2025-12-24T09:06:09+00:00 | Uncaught SyntaxError: missing ) after argument list | -:-

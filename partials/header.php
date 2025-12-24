@@ -39,7 +39,7 @@ Free shipping within city &gt; 300K • 7-day returns • Support 24/7  </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/index.php#blog">Blog</a>
+          <a class="nav-link" href="/blog.php">Blog</a>
         </li>
 
         <li class="nav-item">
