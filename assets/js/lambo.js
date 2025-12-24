@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 // ===== HERO LAMBO controls (delegation + safe) =====
->>>>>>> 34bf1e34c3d10da8cd08dc720659a0ee82487420
 (() => {
   const hero = document.querySelector('#hero');
   if (!hero) return;
@@ -38,18 +35,12 @@
     });
   }
 
-<<<<<<< HEAD
-=======
   // ✅ PAUSE/PLAY bắt click kiểu delegation (ăn chắc)
->>>>>>> 34bf1e34c3d10da8cd08dc720659a0ee82487420
   document.addEventListener('click', async (e) => {
     const btn = e.target.closest('[data-hero-toggle]');
     if (!btn) return;
 
-<<<<<<< HEAD
-=======
     // chỉ xử lý nếu nút nằm trong hero này
->>>>>>> 34bf1e34c3d10da8cd08dc720659a0ee82487420
     if (!hero.contains(btn)) return;
 
     e.preventDefault();
