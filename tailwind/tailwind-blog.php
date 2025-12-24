@@ -1,12 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Tailwind Demo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white p-6">
+<?php
+// Blog section dùng Tailwind CSS, render trong project PHP
+?>
 
+<section id="blog" class="bg-white p-6">
   <!-- BLOG bằng Tailwind -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
@@ -42,5 +38,4 @@ decoding="async" class="w-full h-[180px] object-cover">
 
   </div>
 
-</body>
-</html>
+</section>
