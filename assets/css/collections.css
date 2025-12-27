@@ -1,66 +1,99 @@
-/* RESET LIGHT */
+/* ===============================
+   RESET & BASE
+   =============================== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* HEADER */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(236,72,153,.08), transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(139,92,246,.08), transparent 40%),
+    linear-gradient(180deg,#fff,#fafafa);
+}
+
+/* ===============================
+   HEADER (THIN & GLASS)
+   =============================== */
 .editorial-header {
   position: sticky;
   top: 0;
-  background: white;
   z-index: 50;
-  border-bottom: 1px solid #eee;
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
 }
+
 .editorial-header .wrap {
   max-width: 1400px;
   margin: auto;
-  padding: 24px;
+  padding: 18px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 2px;
 }
+
 .editorial-header a {
-  font-size: 14px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  opacity: .8;
 }
 
-/* HERO */
+/* ===============================
+   HERO (LUXURY SPACE)
+   =============================== */
 .editorial-hero {
-  min-height: 80vh;
+  min-height: 85vh;
+  padding: 0 12%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 10%;
-}
-.editorial-hero h2 {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 1.1;
-}
-.editorial-hero p {
-  margin-top: 20px;
-  max-width: 420px;
-  font-size: 16px;
-  opacity: .7;
 }
 
-/* COLLECTIONS */
+.editorial-hero h2 {
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  background: linear-gradient(90deg,#ec4899,#facc15,#8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.editorial-hero p {
+  margin-top: 24px;
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ===============================
+   COLLECTIONS LAYOUT
+   =============================== */
 .editorial-collections {
   max-width: 1400px;
   margin: auto;
 }
+
 .editorial-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 90vh;
   align-items: center;
+  min-height: 85vh;
+  position: relative;
 }
+
 .editorial-row.reverse {
   direction: rtl;
 }
@@ -68,34 +101,55 @@
   direction: ltr;
 }
 
-/* TEXT */
+/* ===============================
+   TEXT BLOCK
+   =============================== */
 .editorial-text {
-  padding: 10%;
+  padding: 12%;
 }
+
 .editorial-index {
-  font-size: 14px;
-  opacity: .4;
-  letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #a855f7;
+  margin-bottom: 12px;
 }
+
 .editorial-text h3 {
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
   font-weight: 800;
-  margin: 10px 0;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg,#111,#444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .6s ease;
 }
+
+.editorial-row:hover h3 {
+  background: linear-gradient(90deg,#ec4899,#facc15,#8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .editorial-text p {
   max-width: 420px;
   font-size: 15px;
-  line-height: 1.7;
-  opacity: .7;
+  line-height: 1.8;
+  color: #666;
 }
+
+/* ===============================
+   LINK STYLE
+   =============================== */
 .editorial-link {
   display: inline-block;
-  margin-top: 30px;
-  font-size: 13px;
+  margin-top: 32px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
   position: relative;
 }
+
 .editorial-link::after {
   content: '';
   position: absolute;
@@ -103,159 +157,85 @@
   bottom: -6px;
   width: 0;
   height: 1px;
-  background: #000;
-  transition: .4s;
+  background: linear-gradient(90deg,#ec4899,#facc15,#8b5cf6);
+  transition: .4s ease;
 }
+
 .editorial-link:hover::after {
   width: 100%;
 }
 
-/* IMAGE */
+/* ===============================
+   IMAGE (EDITORIAL FEEL)
+   =============================== */
 .editorial-image {
   height: 70vh;
+  position: relative;
   overflow: hidden;
 }
+
 .editorial-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s ease;
+  filter: saturate(1.1) contrast(1.05);
+  transition: transform 1.4s ease;
 }
+
 .editorial-row:hover img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
-/* FOOTER */
-.editorial-footer {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 13px;
-  opacity: .5;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .editorial-row {
-    grid-template-columns: 1fr;
-    min-height: unset;
-  }
-  .editorial-image {
-    height: 50vh;
-  }
-  .editorial-text {
-    padding: 40px 24px;
-  }
-  .editorial-hero {
-    padding: 80px 24px;
-  }
-}
-/* ===============================
-   COLOR ENHANCEMENT – NON-DESTRUCTIVE
-   =============================== */
-
-/* BACKGROUND GLOBAL – NHẸ NHÀNG */
-body {
-  background:
-    radial-gradient(circle at 15% 10%, rgba(236,72,153,.12), transparent 40%),
-    radial-gradient(circle at 85% 90%, rgba(139,92,246,.12), transparent 40%),
-    linear-gradient(180deg, #ffffff, #fafafa);
-}
-
-/* HEADER GLASSY */
-.editorial-header {
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(12px);
-}
-
-/* HERO TITLE – GRADIENT TEXT */
-.editorial-hero h2 {
-  background: linear-gradient(
-    90deg,
-    #ec4899,
-    #facc15,
-    #8b5cf6
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* HERO SUBTEXT */
-.editorial-hero p {
-  color: #555;
-}
-
-/* INDEX COLOR */
-.editorial-index {
-  color: #a855f7;
-  opacity: .8;
-}
-
-/* TITLE COLOR SHIFT ON HOVER */
-.editorial-text h3 {
-  background: linear-gradient(90deg,#111,#444);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background .6s ease;
-}
-.editorial-row:hover .editorial-text h3 {
-  background: linear-gradient(90deg,#ec4899,#facc15,#8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* LINK LINE GRADIENT */
-.editorial-link::after {
-  background: linear-gradient(90deg,#ec4899,#facc15,#8b5cf6);
-}
-
-/* IMAGE COLOR OVERLAY */
-.editorial-image {
-  position: relative;
-}
 .editorial-image::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(236,72,153,.25),
-    rgba(250,204,21,.25),
-    rgba(139,92,246,.25)
+    rgba(236,72,153,.18),
+    rgba(250,204,21,.18),
+    rgba(139,92,246,.18)
   );
   mix-blend-mode: overlay;
   opacity: .6;
-  transition: opacity .6s ease;
+  transition: .6s ease;
 }
+
 .editorial-row:hover .editorial-image::after {
-  opacity: .9;
+  opacity: .85;
 }
 
-/* IMAGE COLOR BOOST */
-.editorial-image img {
-  filter: saturate(1.15) contrast(1.05);
-}
-
-/* SOFT GLOW ON ROW HOVER */
-.editorial-row {
-  position: relative;
-}
-.editorial-row::before {
-  content: '';
-  position: absolute;
-  inset: 15%;
-  background: radial-gradient(circle, rgba(236,72,153,.25), transparent 70%);
-  opacity: 0;
-  transition: opacity .6s ease;
-  z-index: 0;
-}
-.editorial-row:hover::before {
-  opacity: 1;
-}
-
-/* FOOTER COLOR */
+/* ===============================
+   FOOTER (SMALL & CLEAN)
+   =============================== */
 .editorial-footer {
-  background: linear-gradient(90deg,#ec4899,#facc15,#8b5cf6);
-  color: white;
-  opacity: 1;
+  padding: 18px 0;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #777;
+  border-top: 1px solid rgba(0,0,0,.06);
+  background: #fff;
 }
 
+/* ===============================
+   MOBILE
+   =============================== */
+@media (max-width: 900px) {
+  .editorial-row {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .editorial-image {
+    height: 50vh;
+  }
+
+  .editorial-text {
+    padding: 48px 24px;
+  }
+
+  .editorial-hero {
+    padding: 96px 24px;
+  }
+}
