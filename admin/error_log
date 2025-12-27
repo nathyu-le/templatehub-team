@@ -32,3 +32,5 @@ Stack trace:
 #0 /home/toataikhoanvn/likesub.sale/admin/blog.php(54): PDO->query()
 #1 {main}
   thrown in /home/toataikhoanvn/likesub.sale/admin/blog.php on line 54
+[26-Dec-2025 05:07:10 UTC] PHP Warning:  move_uploaded_file(/home/toataikhoanvn/likesub.sale/admin/../uploads/collections/1766725630_7349.jpg): Failed to open stream: No such file or directory in /home/toataikhoanvn/likesub.sale/admin/collections.php on line 28
+[26-Dec-2025 05:07:10 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpmhf1Mr' to '/home/toataikhoanvn/likesub.sale/admin/../uploads/collections/1766725630_7349.jpg' in /home/toataikhoanvn/likesub.sale/admin/collections.php on line 28

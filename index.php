@@ -81,7 +81,7 @@ require_once __DIR__ . '/partials/header.php';
   <!-- NEWSLETTER -->
   <section class="container my-5">
   <iframe
-    src="iframe/-demo.html"
+    src="tailwind/tailwind-demo.html"
     style="width:100%;border:0;overflow:hidden;display:block;"
     height="170"
     loading="lazy">

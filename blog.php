@@ -62,11 +62,6 @@ tailwind.config = { theme: { extend: { fontFamily: { display:['Poppins','sans-se
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 text-white py-4 mt-12">
-  <div class="max-w-7xl mx-auto text-center space-y-2">
-    <p class="font-bold"> Blog © 2025</p>
-   
-  </div>
-</footer>
+
 </body>
 </html>

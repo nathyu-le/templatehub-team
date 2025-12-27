@@ -35,7 +35,7 @@ Free shipping within city &gt; 300K • 7-day returns • Support 24/7  </div>
 
         <!-- anchor sections on Home -->
         <li class="nav-item">
-          <a class="nav-link" href="/index.php#collections">Collections</a>
+          <a class="nav-link" href="/collections.php">Collections</a>
         </li>
 
         <li class="nav-item">

@@ -21,6 +21,8 @@ function nav_active(string $needle, string $path): string {
     <a <?= nav_active('/admin/categories',$path) ?> href="/admin/categories.php">Categories</a>
     <a <?= nav_active('/admin/orders',$path) ?> href="/admin/orders.php">Orders</a>
     <a <?= nav_active('/admin/users',$path) ?> href="/admin/users.php">Users</a>
+    <a <?= nav_active('/admin/blog',$path) ?> href="/admin/blog.php">Blog</a>
+    <a <?= nav_active('/admin/collections',$path) ?> href="/admin/collections.php">Collections</a>
 
     <hr class="my-3">
     <a href="/index.php">← Back to site</a>
