@@ -12,41 +12,72 @@ if (!$blog) {
 }
 
 $imagePath = 'uploads/blogs/' . $blog['image'];
-$image = (!empty($blog['image']) && file_exists($imagePath)) ? $imagePath : 'uploads/placeholder.png';
+$image = (!empty($blog['image']) && file_exists($imagePath))
+  ? $imagePath
+  : 'uploads/placeholder.png';
+
+$page_title = $blog['title'];
+
+require_once __DIR__ . '/partials/head.php';
+require_once __DIR__ . '/partials/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<title><?= e($blog['title']) ?></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/assets/css/blog.css">
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white min-h-screen">
 
-<!-- HEADER -->
-<header class="bg-gradient-to-r from-orange-600 via-orange-500 to-black text-black py-6 shadow-lg sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto flex justify-between items-center px-6">
-    <a href="blog.php" class="text-orange-400 font-bold hover:underline">← BACK</a>
-    <h1 class="font-extrabold text-2xl animate-pulse text-orange-400">Blog Detail</h1>
+<!-- HERO -->
+<section class="relative h-[75vh] md:h-[85vh] w-full overflow-hidden">
+
+  <!-- IMAGE -->
+  <img
+    src="<?= e($image) ?>"
+    alt="<?= e($blog['title']) ?>"
+    class="absolute inset-0 w-full h-full object-cover"
+  >
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-black/45"></div>
+
+  <!-- TEXT -->
+  <div class="absolute inset-0 flex items-end">
+    <div class="max-w-5xl px-6 pb-16 md:pb-24 text-white">
+      <p class="text-xs tracking-widest uppercase opacity-80 mb-3">
+        <?= date('F d, Y', strtotime($blog['created_at'])) ?>
+      </p>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight max-w-3xl">
+        <?= e($blog['title']) ?>
+      </h1>
+    </div>
   </div>
-</header>
+</section>
 
-<main class="max-w-5xl mx-auto px-6 py-12">
-  <h2 class="text-3xl font-bold mb-4 text-gradient animate-text-glow">Title: <?= e($blog['title']) ?></h2>
-  <p class="text-gray-500 mb-8">Date: <?= date('d/m/Y', strtotime($blog['created_at'])) ?></p>
+<!-- CONTENT -->
+<main class="max-w-4xl mx-auto px-6 py-16">
 
-  <div class="relative mb-12 overflow-hidden rounded-3xl shadow-lg">
-    <div class="absolute -inset-2 card-bg-glow blur opacity-20"></div>
-    <img src="<?= e($image) ?>" class="w-full object-cover rounded-3xl transform hover:scale-110 transition-transform duration-700">
+  <!-- ARTICLE -->
+  <article class="blog-article">
+
+  <!-- LEAD -->
+  <p class="lead">
+    <?= e(mb_substr(strip_tags($blog['content']), 0, 180)) ?>...
+  </p>
+
+  <!-- FULL CONTENT -->
+  <?= $blog['content'] ?>
+
+</article>
+
+  <!-- DIVIDER -->
+  <div class="my-20 border-t"></div>
+
+  <!-- BACK -->
+  <div class="text-center">
+    <a
+      href="/blog.php"
+      class="inline-block text-sm tracking-wide font-medium text-gray-600 hover:text-black transition"
+    >
+      ← Back to Blog
+    </a>
   </div>
 
-  <article class="prose prose-lg max-w-none animate-fade-in text-black-1000"> Content :
-    <?= $blog['content'] ?>
-  </article>
 </main>
 
-
-</body>
-</html>
+<?php require_once __DIR__ . '/partials/footer.php'; ?>

@@ -21,6 +21,23 @@
 <link rel="stylesheet" href="/assets/css/lambo.css?v=1">
 <link rel="stylesheet" href="/assets/css/product.css?v=13">
 
+ <!-- TAILWIND CDN – GLOBAL -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config (optional) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#f97316'
+          }
+        }
+      }
+    }
+  </script>
+<link rel="stylesheet" href="/assets/css/style.css?v=7">  <!-- TAILWIND CSS  -->
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BKSNHQW96"></script>
 <script>

@@ -28,11 +28,27 @@ $best = db()->query("
   ORDER BY sold_qty DESC
   LIMIT 8
 ")->fetchAll();
+/* COLLECTIONS – LIMIT 3 */
+$collections_home = db()->query("
+  SELECT id, title, subtitle, image
+  FROM collections
+  ORDER BY id DESC
+  LIMIT 3
+")->fetchAll();
+
+/* BLOG – LIMIT 3 */
+$blogs_home = db()->query("
+  SELECT id, title, image, created_at, content
+  FROM blogs
+  ORDER BY created_at DESC
+  LIMIT 3
+")->fetchAll();
 
 require_once __DIR__ . '/partials/head.php';
 require_once __DIR__ . '/partials/header.php';
 ?>
 
+<!-- HERO LAMBO STYLE -->
 <section class="hero-lambo" id="hero">
   <div class="hero-bg">
 
@@ -63,9 +79,9 @@ require_once __DIR__ . '/partials/header.php';
         <button class="dot" data-hero-go="2" aria-label="Slide 3"></button>
       </div>
 
-      <button type="button" class="hero-pause" data-hero-toggle aria-label="Pause/Play">
-  <span class="icon">Ⅱ</span>
-</button>
+      <button class="hero-pause" data-hero-toggle aria-label="Pause/Play">
+        <span class="icon">Ⅱ</span>
+      </button>
     </div>
   </div>
 
@@ -79,14 +95,61 @@ require_once __DIR__ . '/partials/header.php';
 </section>
 
   <!-- NEWSLETTER -->
-  <section class="container my-5">
-  <iframe
-    src="tailwind/tailwind-demo.html"
-    style="width:100%;border:0;overflow:hidden;display:block;"
-    height="170"
-    loading="lazy">
-  </iframe>
+  <section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+    <!-- ITEM 1 -->
+    <div class="relative rounded-xl overflow-hidden h-32">
+      <img src="/uploads/ft1.jpg"
+           class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <div class="absolute inset-0 bg-white/70"></div>
+
+      <div class="relative z-10 h-full flex flex-col items-center justify-center">
+        <div class="text-2xl font-bold">50K+</div>
+        <div class="text-sm text-gray-600">Customer</div>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="relative rounded-xl overflow-hidden h-32">
+      <img src="/uploads/ft2.jpg"
+           class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <div class="absolute inset-0 bg-white/70"></div>
+
+      <div class="relative z-10 h-full flex flex-col items-center justify-center">
+        <div class="text-2xl font-bold">99.9%</div>
+        <div class="text-sm text-gray-600">Uptime</div>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="relative rounded-xl overflow-hidden h-32">
+      <img src="/uploads/ft3.jpg"
+           class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <div class="absolute inset-0 bg-white/70"></div>
+
+      <div class="relative z-10 h-full flex flex-col items-center justify-center">
+        <div class="text-2xl font-bold">24/7</div>
+        <div class="text-sm text-gray-600">Support</div>
+      </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="relative rounded-xl overflow-hidden h-32">
+      <img src="/uploads/ft4.jpg"
+           class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <div class="absolute inset-0 bg-white/70"></div>
+
+      <div class="relative z-10 h-full flex flex-col items-center justify-center">
+        <div class="text-2xl font-bold">100+</div>
+        <div class="text-sm text-gray-600">Features</div>
+      </div>
+    </div>
+
+  </div>
 </section>
+
+<br>
 <main class="container">
 
   <!-- NEW -->
@@ -100,14 +163,7 @@ require_once __DIR__ . '/partials/header.php';
 
  <div class="row g-3">
   <?php foreach ($new as $p): 
-    $price = (float)$p['price'];
-$sale  = ($p['sale_price'] === null) ? null : (float)$p['sale_price'];
-
-$final = $price;
-if ($sale !== null && $sale > 0 && $sale < $price) {
-  $final = $sale;
-}
-
+    $final = $p['sale_price'] ?? $p['price'];
     $thumb = $p['thumbnail'] ?: 'uploads/placeholder.png';
   ?>
     <div class="col-6 col-md-3">
@@ -118,19 +174,31 @@ if ($sale !== null && $sale > 0 && $sale < $price) {
 
          <section id="collections">
   <!-- COLLECTION -->
-  <div class="section-head">
-    <div>
-      <h2>Collections</h2>
-      <div class="sub">we design according to your style.</div>
-    </div>
+<div class="section-head">
+  <div>
+    <h2>Collections</h2>
+    <div class="sub">we design according to your style.</div>
   </div>
-<iframe
-    src="tailwind/tailwind-collections.html"
-    style="width:100%;border:0;overflow:hidden;display:block;"
-    height="260"
-    loading="lazy">
-  </iframe>
-</section>
+</div>
+
+<div class="row g-3 cgrid">
+  <?php foreach ($collections_home as $c): 
+    $img = $c['image'] ? '/uploads/collections/'.$c['image'] : '/uploads/placeholder.png';
+  ?>
+    <div class="col-md-4">
+      <a class="citem d-block" href="/products.php?collection=<?= $c['id'] ?>">
+        <img src="<?= e($img) ?>" alt="<?= e($c['title']) ?>">
+        <div class="cover"></div>
+        <div class="txt">
+          <div class="t"><?= e($c['title']) ?></div>
+          <div class="d"><?= e($c['subtitle']) ?></div>
+        </div>
+      </a>
+    </div>
+  <?php endforeach; ?>
+</div>
+
+
   <!-- BEST SELLER -->
   <div class="section-head">
     <div>
@@ -142,13 +210,7 @@ if ($sale !== null && $sale > 0 && $sale < $price) {
 
  <div class="row g-3">
   <?php foreach ($best as $p): 
-$price = (float)$p['price'];
-$sale  = ($p['sale_price'] === null) ? null : (float)$p['sale_price'];
-
-$final = $price;
-if ($sale !== null && $sale > 0 && $sale < $price) {
-  $final = $sale;
-}
+    $final = $p['sale_price'] ?? $p['price'];
     $thumb = $p['thumbnail'] ?: 'uploads/placeholder.png';
   ?>
     <div class="col-6 col-md-3">
@@ -159,23 +221,38 @@ if ($sale !== null && $sale > 0 && $sale < $price) {
 
     <section id="blog">    
   <!-- BLOG -->
-  <div class="section-head">
-    <div>
-      <h2>Journal & Blog</h2>
-      <div class="sub">new trends and articles</div>
-    </div>
-    <a class="btn btn-outline-dark btn-sm" href="#">Read more</a>
+ <!-- BLOG -->
+<div class="section-head">
+  <div>
+    <h2>Journal & Blog</h2>
+    <div class="sub">new trends and articles</div>
   </div>
+  <a class="btn btn-outline-dark btn-sm" href="/blog.php">Read more</a>
+</div>
 
- <iframe
-    src="tailwind/tailwind-blog.html"
-    style="width:100%;border:0;overflow:hidden;display:block;"
-    height=400
-    loading="lazy">
-  </iframe>
-</section>
-  </div>
-  </section>
+<div class="row g-3">
+  <?php foreach ($blogs_home as $b):
+    $img = $b['image'] ? '/uploads/blogs/'.$b['image'] : '/uploads/placeholder.png';
+  ?>
+    <div class="col-md-4">
+      <a href="/blog_detail.php?id=<?= $b['id'] ?>" class="blog-link">
+        <div class="blogcard">
+          <img src="<?= e($img) ?>" alt="<?= e($b['title']) ?>">
+          <div class="b">
+            <div class="date">
+              <?= date('M Y', strtotime($b['created_at'])) ?>
+            </div>
+            <div class="title"><?= e($b['title']) ?></div>
+            <p class="desc">
+              <?= e(mb_strimwidth(strip_tags($b['content']), 0, 150, '...')) ?>
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  <?php endforeach; ?>
+</div>
+
 <br>
  
 

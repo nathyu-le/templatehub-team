@@ -1,57 +1,71 @@
-<footer id="contact" class="footer">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <h6>SimpleShop</h6>
-        <div class="fmuted">
-          Modern storefront template (PHP + Bootstrap). Giao diện trắng, sạch, dễ chỉnh theme.
-        </div>
-        <div class="mt-3 social">
-          <a href="#" title="Facebook">f</a>
-          <a href="#" title="Instagram">ig</a>
-          <a href="#" title="TikTok">tt</a>
+<footer id="contact" class="bg-gray-50 border-t mt-24">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <!-- TOP -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+
+      <!-- BRAND -->
+      <div class="md:col-span-4">
+        <h6 class="font-semibold text-lg mb-3">finalwebsite</h6>
+        <p class="text-sm text-gray-500 leading-relaxed">
+        </p>
+
+        <div class="flex gap-3 mt-4 text-sm">
+          <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border hover:bg-black hover:text-white transition">
+            f
+          </a>
+          <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border hover:bg-black hover:text-white transition">
+            ig
+          </a>
+          <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border hover:bg-black hover:text-white transition">
+            tt
+          </a>
         </div>
       </div>
 
-      <div class="col-md-2">
-        <h6>Shop</h6>
-        <div class="d-flex flex-column gap-2">
-          <a href="/products.php">All products</a>
-          <a href="#">New arrivals</a>
-          <a href="#">Best sellers</a>
+      <!-- SHOP -->
+      <div class="md:col-span-2">
+        <h6 class="font-semibold mb-3">Shop</h6>
+        <div class="flex flex-col gap-2 text-sm text-gray-600">
+          <a href="/products.php" class="hover:text-black">All products</a>
+          <a href="#" class="hover:text-black">New arrivals</a>
+          <a href="#" class="hover:text-black">Best sellers</a>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <h6>Support</h6>
-        <div class="d-flex flex-column gap-2">
-          <a href="#">Shipping</a>
-          <a href="#">Return policy</a>
-          <a href="#">Privacy</a>
+      <!-- SUPPORT -->
+      <div class="md:col-span-3">
+        <h6 class="font-semibold mb-3">Support</h6>
+        <div class="flex flex-col gap-2 text-sm text-gray-600">
+          <a href="#" class="hover:text-black">Shipping</a>
+          <a href="#" class="hover:text-black">Return policy</a>
+          <a href="#" class="hover:text-black">Privacy</a>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <h6>Contact</h6>
-        <div class="fmuted">
+      <!-- CONTACT -->
+      <div class="md:col-span-3">
+        <h6 class="font-semibold mb-3">Contact</h6>
+        <p class="text-sm text-gray-500 leading-relaxed">
           Đà Nẵng, Việt Nam<br>
           Hotline: 090xxxxxxx<br>
-          Email: support@simpleshop.vn
-        </div>
+          Email: cskh247@finalwebsite.vn
+        </p>
       </div>
+
     </div>
 
-    <div class="bottom text-center">
-      © <?= date('Y') ?> SimpleShop. All rights reserved.
+    <!-- BOTTOM -->
+    <div class="border-t mt-12 pt-6 text-center text-sm text-gray-500">
+      © <?= date('Y') ?> finalwebsite. All rights reserved.
     </div>
+
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script type="module" src="/assets/js/app.js?v=<?= time() ?>"></script>
-<script src="/assets/js/lambo.js?v=4"></script>
-<script src="/assets/js/product.js"></script>
-
-
+  <!-- JS -->
+  <script type="module" src="/assets/js/app.js?v=<?= time() ?>"></script>
+  <script src="/assets/js/modules/lambo.js?v=4"></script>
+  <script src="/assets/js/modules/product.js"></script>
 </footer>
 </body>
 </html>
