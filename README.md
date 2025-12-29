@@ -1,17 +1,25 @@
 TÊN DỰ ÁN : Fashion E-Commerce Website
+
 Môn Học : Website application design and development
+
 Giáo Viên : Nguyễn Hữu Quyền 
+
 Nhóm : 5 
+
 Thành Viên : 
+
     - Le Dinh Nhat Huy | 23090003
     - Nguyen Phuoc Hai | 23090030
     - Le Quang Tung    | 23090021
     - Truong Quynh Chau| 23090037
+    
 Commit Nhóm : 40 Commit 
+
     - Le Dinh Nhat Huy | 31 Commit 
     - Nguyen Phuoc Hai | 5 Commit   
     - Le Quang Tung    | 2 Commit
     - Truong Quynh Chau| 2 Commit
+    
 Năm Học : 2024–2025
 
 I - MỤC TIÊU CỦA DỰ ÁN 
@@ -136,29 +144,29 @@ VI - CÔNG NGHỆ SỬ DỤNG
 - Deploy : Hosting Cpanel + Domain
 
 VII - TRIỂN KHAI TAILWIND CLI 
-8.1 Các bước triển khai
-npm install -D tailwindcss@3 postcss autoprefixer
-npx tailwindcss init -p
+- Các bước triển khai
+    + npm install -D tailwindcss@3 postcss autoprefixer
+    + npx tailwindcss init -p
 
 - input.css 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    + @tailwind base;
+    + @tailwind components;
+    + @tailwind utilities;
 
 - build css 
-npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --minify
+    + npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --minify
 
 VIII - CÁC CƠ SỞ DỮ LIỆU 
 - Các bảng chính:
- + users
- + products 
- + collections
- + blogs
- + orders
- + orders_items
- + categories
- + carts 
- + cart_items
+    + users
+    + products 
+    + collections
+    + blogs
+    + orders
+    + orders_items
+    + categories
+    + carts 
+    + cart_items
 - Database được đính kèm trong file database.sql 
 
 IX - HƯỚNG PHÁT TRIỂN TƯƠNG LAI 
