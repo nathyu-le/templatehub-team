@@ -24,7 +24,6 @@
     }
   };
 
-  // dots click
   if (dotsWrap) {
     dotsWrap.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-hero-go]');
@@ -35,12 +34,10 @@
     });
   }
 
-  // ✅ PAUSE/PLAY bắt click kiểu delegation (ăn chắc)
   document.addEventListener('click', async (e) => {
     const btn = e.target.closest('[data-hero-toggle]');
     if (!btn) return;
 
-    // chỉ xử lý nếu nút nằm trong hero này
     if (!hero.contains(btn)) return;
 
     e.preventDefault();
