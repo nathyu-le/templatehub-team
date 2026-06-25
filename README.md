@@ -1,27 +1,5 @@
 TÊN DỰ ÁN : Fashion E-Commerce Website
 
-Môn Học : Website application design and development
-
-Giáo Viên : Nguyễn Hữu Quyền 
-
-Nhóm : 5 
-
-Thành Viên : 
-
-    - Le Dinh Nhat Huy | 23090003
-    - Nguyen Phuoc Hai | 23090030
-    - Le Quang Tung    | 23090021
-    - Truong Quynh Chau| 23090037
-    
-Commit Nhóm : 40 Commit 
-
-    - Le Dinh Nhat Huy | 31 Commit 
-    - Nguyen Phuoc Hai | 5 Commit   
-    - Le Quang Tung    | 2 Commit
-    - Truong Quynh Chau| 2 Commit
-    
-Năm Học : 2024–2025
-
 I - MỤC TIÊU CỦA DỰ ÁN 
 - Xây dựng một website bán hàng thời trang hoàn chỉnh từ frontend đến backend.
 - Áp dụng kiến thức đã học
@@ -188,7 +166,6 @@ X - KẾT LUẬN TỔNG BÁO CÁO
 - Tuy nhiên, thông qua việc tìm hiểu tài liệu và được thầy hướng dẫn tận tình, trao đổi trong nhóm và thử nghiệm nhiều giải pháp khác nhau, nhóm đã từng bước khắc phục các vấn đề trên. Điều này giúp các thành viên nâng cao đáng kể kỹ năng debug, tư duy giải quyết vấn đề và khả năng làm việc nhóm trong môi trường phát triển phần mềm.
 
 XI - TÀI LIỆU THAM KHẢO 
-- Thầy : Nguyền Hữu Quyền 
 - https://tailwindcss.com
 - https://getbootstrap.com
 - https://w3school.com
